@@ -400,16 +400,19 @@ h1 {
   right: 24px;
   background: #d71920;
   color: #ffffff;
-  padding: 16px 22px;
+  padding: 16px 26px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.05em;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   z-index: 999;
   transition: all 0.25s ease;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .floating-call:hover {
   background: #111111;
+  transform: translateY(-2px);
 }
