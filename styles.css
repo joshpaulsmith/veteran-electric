@@ -413,4 +413,9 @@ h1 {
 .floating-call:hover {
   background: #d71920;
   transform: translateY(-2px);
+}.hero-sub {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #666666;
+  font-size: 0.95rem;
 }
