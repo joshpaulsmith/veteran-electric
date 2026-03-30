@@ -418,4 +418,20 @@ h1 {
   margin-bottom: 30px;
   color: #666666;
   font-size: 0.95rem;
+}.careers-link-wrap {
+  margin-top: 22px;
+}
+
+.careers-link {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid #111111;
+  padding-bottom: 3px;
+  transition: all 0.2s ease;
+}
+
+.careers-link:hover {
+  color: #d71920;
+  border-color: #d71920;
 }
