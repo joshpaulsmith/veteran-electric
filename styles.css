@@ -680,4 +680,12 @@ h1 {
   letter-spacing: 2px;
   text-align: center;
   opacity: 0.8;
+}/* Hide only the logo part */
+.landing-page .header-brand {
+  display: none;
+}
+
+/* Keep the menu button */
+.landing-page .site-header {
+  justify-content: flex-end;
 }
