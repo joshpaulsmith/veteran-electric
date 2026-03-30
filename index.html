@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veteran Electric | Sault Ste. Marie</title>
-  <meta name="description" content="Veteran Electric is a unionized electrical contractor based in Sault Ste. Marie, employing military veterans and serving utility, industrial, commercial, and residential clients." />
+  <meta
+    name="description"
+    content="Veteran Electric is a unionized electrical contractor based in Sault Ste. Marie, employing military veterans and serving utility, industrial, commercial, and residential clients."
+  />
+  <link rel="canonical" href="https://veteranelectric.ca/" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="landing-page">
@@ -13,21 +17,27 @@
   </div>
 
   <header class="site-header">
-    <a href="index.html" class="header-brand">
+    <a href="/" class="header-brand">
       <img src="veteranlogo.png" alt="Veteran Electric logo" />
       <span>Veteran Electric</span>
     </a>
 
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <button
+      class="menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="site-menu"
+      type="button"
+    >
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <nav class="site-menu" id="site-menu">
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
+      <a href="/about/">About</a>
+      <a href="/careers/">Careers</a>
+      <a href="/contact/">Contact</a>
     </nav>
   </header>
 
@@ -37,7 +47,9 @@
         <img src="veteranlogo.png" alt="Veteran Electric logo" class="hero-logo" />
 
         <p class="eyebrow">Union • Veteran-Owned Workforce • Sault Ste. Marie</p>
+
         <h1>Veteran Electric</h1>
+
         <p class="hero-text">
           A unionized electrical contractor proudly employing military veterans and serving
           Northern Ontario with dependable utility and electrical services.
@@ -48,12 +60,12 @@
         </p>
 
         <div class="division-buttons">
-          <a class="division-card electrical" href="electrical.html">
+          <a class="division-card electrical" href="/electrical/">
             <span class="division-label">Electrical Division</span>
             <span class="division-services">Industrial • Commercial • Residential</span>
           </a>
 
-          <a class="division-card utility" href="utility.html">
+          <a class="division-card utility" href="/utility/">
             <span class="division-label">Utility Division</span>
             <span class="division-services">Substation Maintenance • Energy Metering • Power Line Construction</span>
           </a>
@@ -61,6 +73,10 @@
       </div>
     </section>
   </main>
+
+  <a class="floating-call" href="tel:17052554449">
+    Call a Veteran
+  </a>
 
   <script>
     window.addEventListener("load", () => {
@@ -74,15 +90,24 @@
     const toggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".site-menu");
 
-    toggle.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("open");
-      toggle.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-  </script>
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
 
-  <a class="floating-call" href="tel:17052554449">
-    Call a Veteran
-  </a>
+      document.addEventListener("click", (event) => {
+        const clickedInsideMenu = menu.contains(event.target);
+        const clickedToggle = toggle.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedToggle) {
+          menu.classList.remove("open");
+          toggle.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+  </script>
 </body>
 </html>
