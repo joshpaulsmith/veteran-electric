@@ -22,7 +22,7 @@ html, body {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
+  background: #f3f3f3;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -66,9 +66,7 @@ body.loaded .page-loader {
   align-items: center;
   justify-content: center;
   padding: 48px 24px;
-  background:
-    linear-gradient(135deg, rgba(215, 25, 32, 0.04), transparent 30%),
-    #ffffff;
+  background: #f3f3f3;
 }
 
 .hero {
@@ -398,14 +396,14 @@ h1 {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: #d71920;
+  background: #111111;
   color: #ffffff;
   padding: 16px 26px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.05em;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
   z-index: 999;
   transition: all 0.25s ease;
   font-size: 14px;
@@ -413,6 +411,6 @@ h1 {
 }
 
 .floating-call:hover {
-  background: #111111;
+  background: #d71920;
   transform: translateY(-2px);
 }
