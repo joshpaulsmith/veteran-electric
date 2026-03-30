@@ -394,4 +394,22 @@ h1 {
   background: #d71920;
   border-color: #d71920;
   color: #ffffff;
+}.floating-call {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #d71920;
+  color: #ffffff;
+  padding: 16px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: all 0.25s ease;
+}
+
+.floating-call:hover {
+  background: #111111;
 }
