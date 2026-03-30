@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veteran Electric | Sault Ste. Marie</title>
+  <meta name="description" content="Veteran Electric is a unionized electrical contractor based in Sault Ste. Marie, employing military veterans and serving utility, industrial, commercial, and residential clients." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="landing-page">
+  <div class="page-loader">
+    <div class="loader-mark"></div>
+  </div>
 
+  <main class="landing-shell">
+    <section class="hero">
+      <div class="hero-inner">
+        <img src="veteranlogo.png" alt="Veteran Electric logo" class="hero-logo" />
+
+        <p class="eyebrow">Union • Veteran-Owned Workforce • Sault Ste. Marie</p>
+        <h1>Veteran Electric</h1>
+        <p class="hero-text">
+          A unionized electrical contractor proudly employing military veterans and serving
+          Northern Ontario with dependable utility and electrical services.
+        </p>
+
+        <div class="division-buttons">
+          <a class="division-card electrical" href="electrical.html">
+            <span class="division-label">Electrical Division</span>
+            <span class="division-services">Industrial • Commercial • Residential</span>
+          </a>
+
+          <a class="division-card utility" href="utility.html">
+            <span class="division-label">Utility Division</span>
+            <span class="division-services">Substation Maintenance • Energy Metering • Power Line Construction</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+      setTimeout(() => {
+        const loader = document.querySelector(".page-loader");
+        if (loader) loader.style.display = "none";
+      }, 700);
+    });
+  </script>
+</body>
+</html>
