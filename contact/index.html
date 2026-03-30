@@ -26,23 +26,54 @@
     </section>
 
     <section class="section-block">
-      <h2>Get in Touch</h2>
-      <div class="service-grid">
-        <div class="service-box">
-          <h3>Phone</h3>
-          <p><a href="tel:17052554449">705-255-4449</a></p>
-        </div>
-
-        <div class="service-box">
-          <h3>Email</h3>
-          <p><a href="mailto:dj.gareau@veteranelectric.ca">dj.gareau@veteranelectric.ca</a></p>
-        </div>
-
-        <div class="service-box">
-          <h3>Location</h3>
-          <p>Sault Ste. Marie, Ontario<br />Serving Northern Ontario</p>
-        </div>
+      <div class="contact-callout">
+        <p class="contact-callout-label">Call Veteran Electric</p>
+        <a class="contact-phone-main" href="tel:17052554449">705-255-4449</a>
       </div>
+    </section>
+
+    <section class="section-block">
+      <h2>Send a Message</h2>
+
+      <!-- Replace the action URL below with your Formspree or Web3Forms endpoint -->
+      <form class="contact-form" action="YOUR_FORM_ENDPOINT_HERE" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="service-type">Inquiry Type</label>
+            <select id="service-type" name="inquiry_type" required>
+              <option value="">Select an option</option>
+              <option value="service">Service</option>
+              <option value="installation">Installation</option>
+              <option value="general">General Contact</option>
+              <option value="quote">Quote Request</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Submit Request</button>
+      </form>
     </section>
 
     <section class="section-block">
