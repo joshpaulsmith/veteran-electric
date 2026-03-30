@@ -12,6 +12,25 @@
     <div class="loader-mark"></div>
   </div>
 
+  <header class="site-header">
+    <a href="index.html" class="header-brand">
+      <img src="veteranlogo.png" alt="Veteran Electric logo" />
+      <span>Veteran Electric</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-menu" id="site-menu">
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
   <main class="landing-shell">
     <section class="hero">
       <div class="hero-inner">
@@ -24,13 +43,11 @@
           Northern Ontario with dependable utility and electrical services.
         </p>
 
-        <!-- New line added here -->
         <p class="hero-sub">
           Proudly serving Sault Ste. Marie and Northern Ontario.
         </p>
 
         <div class="division-buttons">
-
           <a class="division-card electrical" href="electrical.html">
             <span class="division-label">Electrical Division</span>
             <span class="division-services">Industrial • Commercial • Residential</span>
@@ -52,6 +69,15 @@
         const loader = document.querySelector(".page-loader");
         if (loader) loader.style.display = "none";
       }, 700);
+    });
+
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".site-menu");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      toggle.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   </script>
 
