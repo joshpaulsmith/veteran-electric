@@ -1,1 +1,342 @@
+:root {
+  --black: #050505;
+  --charcoal: #101010;
+  --red: #d71920;
+  --red-dark: #a90f16;
+  --white: #f5f5f5;
+  --gray: #bdbdbd;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(135deg, rgba(215, 25, 32, 0.12), transparent 35%),
+    linear-gradient(225deg, rgba(215, 25, 32, 0.08), transparent 30%),
+    #050505;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Loader */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+body.loaded .page-loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-mark {
+  width: 74px;
+  height: 74px;
+  border: 3px solid rgba(255, 255, 255, 0.14);
+  border-top: 3px solid var(--red);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Landing page */
+.landing-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.hero-logo {
+  width: 110px;
+  max-width: 100%;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 10px 24px rgba(215, 25, 32, 0.18));
+}
+
+.eyebrow {
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-text {
+  max-width: 780px;
+  margin: 0 auto 42px;
+  color: #dddddd;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.division-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.division-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
+  padding: 32px 28px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.division-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  pointer-events: none;
+}
+
+.division-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.division-card.electrical {
+  background: linear-gradient(145deg, #111111, #1a1a1a);
+}
+
+.division-card.utility {
+  background: linear-gradient(145deg, #b11118, #d71920);
+}
+
+.division-label {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.division-services {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inner pages */
+.inner-page {
+  min-height: 100vh;
+  padding: 40px 24px 70px;
+  background:
+    linear-gradient(135deg, rgba(215, 25, 32, 0.08), transparent 30%),
+    #050505;
+}
+
+.inner-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.brand-lockup img {
+  width: 54px;
+  height: auto;
+}
+
+.brand-lockup span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.back-link {
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.back-link:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.page-intro {
+  margin-bottom: 36px;
+}
+
+.page-intro h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 14px;
+}
+
+.page-intro p {
+  max-width: 760px;
+  color: #dddddd;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.service-box {
+  background: linear-gradient(145deg, #101010, #181818);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.service-box h2 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.service-box p {
+  color: #d8d8d8;
+  line-height: 1.7;
+}
+
+.page-note {
+  margin-top: 38px;
+  color: #bcbcbc;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+.utility-accent .service-box {
+  border-color: rgba(215, 25, 32, 0.22);
+}
+
+@media (max-width: 900px) {
+  .division-buttons,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-shell,
+  .inner-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-logo {
+    width: 90px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .division-card {
+    padding: 26px 22px;
+  }
+
+  .division-services {
+    font-size: 0.95rem;
+  }
+}
