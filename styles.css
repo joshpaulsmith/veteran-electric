@@ -914,21 +914,28 @@ body.loaded .page-loader {
 }/* Mobile spacing fix under Utility Division */
 @media (max-width: 768px) {
 
+/* Mobile spacing fix under Utility Division */
+@media (max-width: 768px) {
+
   /* Hide the three info boxes */
-  .feature-grid,
-  .info-grid,
-  .info-cards {
+  .home-support-grid {
     display: none;
   }
 
   /* Pull footer up */
-  footer {
-    margin-top: 20px;
-    padding-top: 30px;
+  .site-footer {
+    margin-top: 10px;
+    padding-top: 24px;
   }
 
   /* Reduce space under Utility card */
   .division-buttons {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+  }
+
+  /* Center text on mobile */
+  .division-card {
+    text-align: center;
+    align-items: center;
   }
 }
