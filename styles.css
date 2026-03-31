@@ -290,7 +290,7 @@ body.loaded .page-loader {
 .division-buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 22px;
   width: 100%;
   max-width: 1020px;
   margin: 0 auto;
@@ -308,6 +308,8 @@ body.loaded .page-loader {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   text-align: center;
   align-items: center;
+  background: #ffffff;
+  color: #111111;
 }
 
 .division-card:hover,
@@ -317,36 +319,14 @@ body.loaded .page-loader {
   border-color: var(--border-strong);
 }
 
-.division-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 228px;
-  padding: 34px 28px;
-  border-radius: 20px;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  align-items: center;
-  background: #ffffff;
+.division-card.electrical {
+  background: linear-gradient(180deg, #ffffff, #fbfbfb);
   color: #111111;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-color: var(--border);
 }
 
-.division-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
-}
-
-/* Utility stays red */
-.division-card.utility {
-  background: linear-gradient(145deg, #cc161d, #f01a23);
-  color: #ffffff;
-  border-color: #cf1a20;
-}
-
-.division-card.utility .division-services {
-  color: rgba(255, 255, 255, 0.9);
+.division-card.electrical .division-services {
+  color: var(--text-soft);
 }
 
 .division-card.utility {
@@ -374,33 +354,33 @@ body.loaded .page-loader {
 
 .home-support-grid {
   width: 100%;
-  max-width: 1020px;
-  margin: 22px auto 0;
+  max-width: 920px;
+  margin: 20px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .support-card {
   background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
   border: 1px solid #222222;
   border-radius: 18px;
-  padding: 22px 20px;
+  padding: 18px 18px;
   text-align: left;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
   color: #ffffff;
 }
 
 .support-card h2 {
-  font-size: 1rem;
+  font-size: 0.94rem;
   margin-bottom: 8px;
   color: #ffffff;
 }
 
 .support-card p {
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.78);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .inner-page {
@@ -692,8 +672,8 @@ body.loaded .page-loader {
   width: 100%;
   background-color: #000000;
   color: #ffffff;
-  padding: 22px 0 28px;
-  margin-top: 24px;
+  padding: 20px 0 24px;
+  margin-top: 20px;
   border-top: 1px solid #222222;
 }
 
@@ -737,7 +717,7 @@ body.loaded .page-loader {
 
   .landing-shell {
     padding-top: 86px;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
 
   .hero-inner {
@@ -760,6 +740,10 @@ body.loaded .page-loader {
     min-height: 190px;
   }
 
+  .home-support-grid {
+    max-width: 100%;
+  }
+
   .inner-page {
     padding-top: 72px;
     padding-bottom: 70px;
@@ -774,11 +758,11 @@ body.loaded .page-loader {
 @media (max-width: 768px) {
   .site-footer {
     margin-top: 18px;
-    padding: 18px 0 24px;
+    padding: 18px 0 22px;
   }
 
   .division-buttons {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 }
 
@@ -823,7 +807,7 @@ body.loaded .page-loader {
   .landing-shell {
     align-items: flex-start;
     padding-top: 78px;
-    padding-bottom: 82px;
+    padding-bottom: 72px;
     min-height: auto;
   }
 
@@ -856,7 +840,7 @@ body.loaded .page-loader {
   }
 
   .division-card {
-    min-height: 180px;
+    min-height: 176px;
     padding: 22px 18px;
     border-radius: 18px;
   }
@@ -867,9 +851,27 @@ body.loaded .page-loader {
     margin-bottom: 10px;
   }
 
-  .division-services,
-  .support-card p {
+  .division-services {
     font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .home-support-grid {
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .support-card {
+    padding: 16px 16px;
+    border-radius: 16px;
+  }
+
+  .support-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .support-card p {
+    font-size: 0.88rem;
     line-height: 1.5;
   }
 
@@ -923,8 +925,7 @@ body.loaded .page-loader {
 
   .service-box,
   .contact-form,
-  .contact-callout,
-  .support-card {
+  .contact-callout {
     padding: 18px;
     border-radius: 16px;
   }
@@ -942,8 +943,8 @@ body.loaded .page-loader {
   }
 
   .site-footer {
-    margin-top: 18px;
-    padding: 16px 0 22px;
+    margin-top: 16px;
+    padding: 16px 0 20px;
   }
 
   .footer-inner {
