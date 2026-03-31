@@ -654,8 +654,8 @@ body.loaded .page-loader {
   width: 100%;
   background-color: #000000;
   color: #ffffff;
-  padding: 26px 0 84px;
-  margin-top: 48px;
+  padding: 22px 0 36px;
+  margin-top: 24px;
   border-top: 1px solid #222222;
 }
 
@@ -667,6 +667,19 @@ body.loaded .page-loader {
   text-align: center;
   opacity: 0.88;
   line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    margin-top: 20px;
+    padding: 18px 0 28px;
+  }
+
+  .footer-inner {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 1100px) {
