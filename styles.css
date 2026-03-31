@@ -317,14 +317,36 @@ body.loaded .page-loader {
   border-color: var(--border-strong);
 }
 
-.division-card.electrical {
-  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  color: #ffffff;
-  border-color: #181818;
+.division-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 228px;
+  padding: 34px 28px;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  align-items: center;
+  background: #ffffff;
+  color: #111111;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.division-card.electrical .division-services {
-  color: rgba(255, 255, 255, 0.82);
+.division-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Utility stays red */
+.division-card.utility {
+  background: linear-gradient(145deg, #cc161d, #f01a23);
+  color: #ffffff;
+  border-color: #cf1a20;
+}
+
+.division-card.utility .division-services {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .division-card.utility {
