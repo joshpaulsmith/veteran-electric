@@ -894,4 +894,20 @@ body.loaded .page-loader {
     letter-spacing: 1.2px;
     line-height: 1.7;
   }
+}.brand-lockup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.brand-lockup img {
+  width: 220px;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .brand-lockup img {
+    width: 180px;
+  }
 }
