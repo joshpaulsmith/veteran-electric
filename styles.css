@@ -911,4 +911,24 @@ body.loaded .page-loader {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}/* Mobile spacing fix under Utility Division */
+@media (max-width: 768px) {
+
+  /* Hide the three info boxes */
+  .feature-grid,
+  .info-grid,
+  .info-cards {
+    display: none;
+  }
+
+  /* Pull footer up */
+  footer {
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+
+  /* Reduce space under Utility card */
+  .division-buttons {
+    margin-bottom: 10px;
+  }
 }
