@@ -1,4 +1,3 @@
-
 :root {
   --bg: #f3f3f3;
   --bg-soft: #ffffff;
@@ -107,7 +106,9 @@ body.loaded .page-loader {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeUp {
@@ -240,7 +241,7 @@ body.loaded .page-loader {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 108px 28px 72px;
+  padding: 108px 28px 40px;
 }
 
 .hero {
@@ -302,25 +303,38 @@ body.loaded .page-loader {
   min-height: 228px;
   padding: 34px 28px;
   border-radius: var(--radius);
-  color: var(--text);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  background: linear-gradient(180deg, #ffffff, #fbfbfb);
-  text-align: left;
+  text-align: center;
+  align-items: center;
 }
 
 .division-card:hover,
 .division-card:focus-visible {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
   border-color: var(--border-strong);
+}
+
+.division-card.electrical {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
+  border-color: #181818;
+}
+
+.division-card.electrical .division-services {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .division-card.utility {
   background: linear-gradient(145deg, #cc161d, #f01a23);
   color: #ffffff;
   border-color: #cf1a20;
+}
+
+.division-card.utility .division-services {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .division-label {
@@ -346,22 +360,24 @@ body.loaded .page-loader {
 }
 
 .support-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--border);
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  border: 1px solid #222222;
   border-radius: 18px;
   padding: 22px 20px;
   text-align: left;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
 }
 
 .support-card h2 {
   font-size: 1rem;
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .support-card p {
   font-size: 0.96rem;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.7;
 }
 
@@ -654,7 +670,7 @@ body.loaded .page-loader {
   width: 100%;
   background-color: #000000;
   color: #ffffff;
-  padding: 22px 0 36px;
+  padding: 22px 0 28px;
   margin-top: 24px;
   border-top: 1px solid #222222;
 }
@@ -667,19 +683,6 @@ body.loaded .page-loader {
   text-align: center;
   opacity: 0.88;
   line-height: 1.8;
-}
-
-@media (max-width: 640px) {
-  .site-footer {
-    margin-top: 20px;
-    padding: 18px 0 28px;
-  }
-
-  .footer-inner {
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    line-height: 1.7;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -712,7 +715,7 @@ body.loaded .page-loader {
 
   .landing-shell {
     padding-top: 86px;
-    padding-bottom: 110px;
+    padding-bottom: 90px;
   }
 
   .hero-inner {
@@ -743,6 +746,17 @@ body.loaded .page-loader {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    margin-top: 18px;
+    padding: 18px 0 24px;
+  }
+
+  .division-buttons {
+    margin-bottom: 6px;
   }
 }
 
@@ -787,7 +801,7 @@ body.loaded .page-loader {
   .landing-shell {
     align-items: flex-start;
     padding-top: 78px;
-    padding-bottom: 100px;
+    padding-bottom: 82px;
     min-height: auto;
   }
 
@@ -820,13 +834,13 @@ body.loaded .page-loader {
   }
 
   .division-card {
-    min-height: 155px;
+    min-height: 180px;
     padding: 22px 18px;
     border-radius: 18px;
   }
 
   .division-label {
-    font-size: 1.18rem;
+    font-size: 1.4rem;
     line-height: 1.15;
     margin-bottom: 10px;
   }
@@ -906,8 +920,8 @@ body.loaded .page-loader {
   }
 
   .site-footer {
-    margin-top: 32px;
-    padding: 20px 0 78px;
+    margin-top: 18px;
+    padding: 16px 0 22px;
   }
 
   .footer-inner {
@@ -918,24 +932,12 @@ body.loaded .page-loader {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-@media (max-width: 768px) {
-  .site-footer {
-    margin-top: 10px;
-    padding-top: 24px;
-  }
-
-  .division-buttons {
-    margin-bottom: 6px;
-  }
-
-  .division-card {
-    text-align: center;
-    align-items: center;
   }
 }
