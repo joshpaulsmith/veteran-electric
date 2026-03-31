@@ -79,8 +79,8 @@ body.loaded .page-loader {
 }
 
 .banner-inner {
-  width: 90%;
-  max-width: 1100px;
+  width: 92%;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -90,8 +90,8 @@ body.loaded .page-loader {
 .banner-logo {
   width: auto;
   height: auto;
-  max-width: min(360px, 72vw);
-  max-height: 64px;
+  max-width: min(420px, 76vw);
+  max-height: 72px;
   object-fit: contain;
 }
 
@@ -115,8 +115,8 @@ body.loaded .page-loader {
 }
 
 .menu-toggle {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
@@ -154,7 +154,7 @@ body.loaded .page-loader {
 
 .site-menu {
   position: absolute;
-  top: 84px;
+  top: 86px;
   right: 24px;
   min-width: 220px;
   background: rgba(255, 255, 255, 0.97);
@@ -191,7 +191,7 @@ body.loaded .page-loader {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 170px 24px 56px;
+  padding: 120px 28px 72px;
   background: var(--bg);
 }
 
@@ -203,7 +203,7 @@ body.loaded .page-loader {
 
 .hero-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1320px;
   text-align: center;
   animation: fadeUp 0.9s ease;
 }
@@ -211,47 +211,49 @@ body.loaded .page-loader {
 .eyebrow {
   color: #666666;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-size: 0.92rem;
   margin-bottom: 26px;
 }
 
 .hero-logo {
-  width: min(420px, 52vw);
-  margin: 0 auto 28px;
+  width: min(500px, 56vw);
+  margin: 0 auto 30px;
   height: auto;
 }
 
 .hero-text {
-  max-width: 780px;
+  max-width: 900px;
   margin: 0 auto;
   color: var(--text-soft);
-  font-size: 1.08rem;
-  line-height: 1.7;
+  font-size: 1.32rem;
+  line-height: 1.75;
 }
 
 .hero-sub {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  max-width: 900px;
+  margin: 14px auto 42px;
   color: #666666;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .division-buttons {
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 28px;
   width: 100%;
-  margin-top: 12px;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .division-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 220px;
-  padding: 32px 28px;
-  border-radius: 20px;
+  min-height: 250px;
+  padding: 42px 32px;
+  border-radius: 22px;
   text-decoration: none;
   color: var(--text);
   border: 1px solid var(--border);
@@ -272,16 +274,16 @@ body.loaded .page-loader {
 }
 
 .division-label {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3vw, 2.6rem);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .division-services {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 
 .floating-call {
@@ -599,6 +601,28 @@ body.loaded .page-loader {
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+  .landing-shell {
+    padding-top: 135px;
+  }
+
+  .hero-logo {
+    width: min(430px, 64vw);
+  }
+
+  .hero-text {
+    font-size: 1.18rem;
+  }
+
+  .division-buttons {
+    max-width: 980px;
+  }
+
+  .division-card {
+    min-height: 230px;
+  }
+}
+
 @media (max-width: 900px) {
   .division-buttons,
   .service-grid,
@@ -607,12 +631,33 @@ body.loaded .page-loader {
     grid-template-columns: 1fr;
   }
 
-  .division-card {
-    min-height: 180px;
+  .landing-shell {
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+
+  .hero-inner {
+    max-width: 760px;
   }
 
   .hero-logo {
-    width: min(320px, 72vw);
+    width: min(360px, 78vw);
+  }
+
+  .hero-text {
+    font-size: 1.08rem;
+  }
+
+  .hero-sub {
+    font-size: 0.98rem;
+  }
+
+  .division-buttons {
+    max-width: 680px;
+  }
+
+  .division-card {
+    min-height: 210px;
   }
 }
 
@@ -622,77 +667,98 @@ body.loaded .page-loader {
   }
 
   .banner-logo {
-    max-width: min(280px, 74vw);
-    max-height: 50px;
+    max-width: min(300px, 76vw);
+    max-height: 54px;
   }
 
   .site-header {
-    top: 74px;
-    padding: 16px 18px;
+    top: 76px;
+    padding: 14px 16px;
+  }
+
+  .menu-toggle {
+    width: 54px;
+    height: 54px;
   }
 
   .site-menu {
-    right: 18px;
-    top: 76px;
+    right: 16px;
+    top: 74px;
     min-width: 200px;
   }
 
   .landing-shell,
   .inner-page {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .landing-shell {
-    padding-top: 150px;
+    align-items: flex-start;
+    padding-top: 118px;
     padding-bottom: 120px;
   }
 
+  .hero-inner {
+    max-width: 100%;
+  }
+
   .eyebrow {
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    line-height: 1.55;
-    margin-bottom: 22px;
+    font-size: 0.74rem;
+    letter-spacing: 0.13em;
+    line-height: 1.6;
+    margin-bottom: 18px;
   }
 
   .hero-logo {
-    width: min(260px, 76vw);
-    margin-bottom: 24px;
+    width: min(300px, 84vw);
+    margin-bottom: 22px;
   }
 
   .hero-text {
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 1.02rem;
+    line-height: 1.8;
+    max-width: 100%;
   }
 
   .hero-sub {
     font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 26px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  .division-buttons {
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .division-card {
+    min-height: 185px;
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .division-label {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .division-services {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .floating-call {
+    right: 14px;
+    bottom: 16px;
+    padding: 13px 20px;
+    font-size: 12px;
   }
 
   .topbar {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .division-card {
-    padding: 26px 22px;
-  }
-
-  .division-label {
-    font-size: 1.3rem;
-  }
-
-  .division-services {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .floating-call {
-    right: 14px;
-    bottom: 18px;
-    padding: 14px 22px;
-    font-size: 13px;
   }
 }
