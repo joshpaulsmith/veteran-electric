@@ -938,4 +938,12 @@ body.loaded .page-loader {
     text-align: center;
     align-items: center;
   }
+}@media (max-width: 640px) {
+  .division-card {
+    min-height: 180px;
+  }
+
+  .division-label {
+    font-size: 1.4rem;
+  }
 }
