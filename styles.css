@@ -974,6 +974,6 @@ body::before {
 
   background: url("background.png") no-repeat center center/cover;
   
-  opacity: 0.25; /* Adjust this number */
+  opacity: 0.10; /* Adjust this number */
   z-index: -1;
 }
