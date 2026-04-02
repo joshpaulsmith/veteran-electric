@@ -964,12 +964,13 @@ body.loaded .page-loader {
     scroll-behavior: auto !important;
   }
 }.division-label {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 900;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
   font-style: italic;
-  transform: skewX(-12deg);
+  transform: skewX(-14deg);
   display: inline-block;
 }
