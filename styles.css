@@ -1035,4 +1035,29 @@ body.landing-page {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}.utility-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 10px 0 30px;
+}
+
+.utility-gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .utility-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .utility-gallery img {
+    height: 220px;
+  }
 }
