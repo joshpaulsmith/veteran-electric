@@ -1027,4 +1027,12 @@ body.loaded .page-loader {
   text-transform: uppercase;
   letter-spacing: 0.015em;
   margin-bottom: 14px;
+}/* LANDING PAGE BACKGROUND IMAGE */
+body.landing-page {
+  background: 
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+    url('mainbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
