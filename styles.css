@@ -1,3 +1,58 @@
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./Gordita-Font/Gordita-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
 :root {
   --bg: #f3f3f3;
   --bg-soft: #ffffff;
