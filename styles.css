@@ -1030,7 +1030,7 @@ body.loaded .page-loader {
 }/* LANDING PAGE BACKGROUND IMAGE */
 body.landing-page {
   background: 
-    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.70)),
     url('mainbackground.jpg');
   background-size: cover;
   background-position: center;
