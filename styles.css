@@ -1019,12 +1019,11 @@ body.loaded .page-loader {
     scroll-behavior: auto !important;
   }
 }.division-label {
-  font-family: 'Rajdhani', Arial, sans-serif;
-  font-size: clamp(2.8rem, 3vw, 3.6rem);
-  font-weight: 700;
+  font-family: 'Gordita', Arial, sans-serif;
+  font-weight: 700;       /* Bold */
+  font-style: italic;     /* Italic */
+  font-size: clamp(2.6rem, 3vw, 3.4rem);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  transform: skewX(-12deg);
-  display: inline-block;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
