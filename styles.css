@@ -1371,4 +1371,17 @@ body.landing-page::before {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}.footer-credit {
+  position: absolute;
+  left: 20px;
+  bottom: 14px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8e8e8e;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  position: relative;
 }
