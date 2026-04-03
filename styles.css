@@ -1384,4 +1384,22 @@ body.landing-page::before {
 
 .site-footer {
   position: relative;
+}.footer-text {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-credit {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-credit:hover {
+  color: #d71920;
 }
