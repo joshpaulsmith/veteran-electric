@@ -775,11 +775,11 @@ body.landing-page::before {
 }
 
 .footer-left {
-  height: 64px;
-  overflow: hidden;
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  overflow: visible;
 }
 
 .footer-right {
@@ -793,14 +793,12 @@ body.landing-page::before {
   color: #6a6a6a;
   line-height: 1.6;
 }
-
 .footer-ccib {
-  width: 190px;
-  max-width: none;
+  width: 100%;
+  max-width: 150px;
   height: auto;
   display: block;
-  margin-left: -10px;
-  margin-top: -8px;
+  margin: 0;
 }
 
 /* IMAGE BLOCKS THROUGHOUT INNER PAGES */
@@ -947,12 +945,11 @@ body.landing-page::before {
     line-height: 1.5;
   }
 
-  .footer-ccib {
-    width: 160px;
-    margin-left: 0;
-    margin-top: -6px;
-  }
-
+.footer-ccib {
+  width: 100%;
+  max-width: 130px;
+  margin: 0;
+}
   .page-image {
     margin: 24px auto;
     border-radius: 16px;
