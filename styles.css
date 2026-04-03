@@ -1380,4 +1380,12 @@ body.landing-page::before {
   text-transform: uppercase;
   color: #8e8e8e;
   text-decoration: none;
+}.jobber-form-wrap {
+  margin-top: 18px;
+}
+
+.jobber-form-wrap iframe,
+.jobber-form-wrap .clienthub-powered-by,
+.jobber-form-wrap #61e9e856-d762-4080-9c9a-0759301c86dc-2421907 {
+  width: 100%;
 }
