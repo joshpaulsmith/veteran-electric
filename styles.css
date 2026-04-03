@@ -313,11 +313,12 @@ body.landing-page {
   background: url('mainbackground.jpg') center/cover no-repeat fixed;
 }
 
-body.landing-page::before {
+body.landing-page::before,
+.landing-page::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   z-index: -1;
@@ -401,14 +402,14 @@ body.landing-page::before {
   border: 1px solid transparent;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
   text-align: center;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.22s ease;
   cursor: pointer;
 }
 
 .division-card:hover,
 .division-card:focus-visible {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   filter: brightness(1.02);
 }
 
@@ -464,7 +465,7 @@ body.landing-page::before {
 .inner-wrap {
   width: min(var(--content-width), calc(100% - 12px));
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 40px;
 }
 
 .topbar {
@@ -525,7 +526,7 @@ body.landing-page::before {
 .page-intro,
 .utility-intro {
   max-width: 900px;
-  margin: 0 0 34px;
+  margin: 0 0 40px;
 }
 
 .page-intro h1,
@@ -644,7 +645,7 @@ body.landing-page::before {
 /* content sections */
 
 .section-block {
-  margin: 0 0 26px;
+  margin: 0 0 50px;
   padding: 34px 34px 32px;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--border);
@@ -908,47 +909,123 @@ body.landing-page::before {
 
 .site-footer {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.96);
+  background: #f3f3f3;
   color: #111111;
-  padding: 18px 0;
-  margin-top: 28px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 24px 20px;
+  margin-top: 32px;
+  border-top: 1px solid #e0e0e0;
   flex-shrink: 0;
 }
 
 .footer-inner {
-  width: min(92%, 1100px);
+  width: min(100%, 1100px);
   margin: 0 auto;
+}
+
+/* supports both old and newer footer markup */
+.footer-row {
   display: grid;
-  grid-template-columns: 140px 1fr 140px;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 18px;
+  gap: 24px;
+  width: 100%;
 }
 
 .footer-left {
   display: flex;
   align-items: center;
+  gap: 18px;
   justify-content: flex-start;
-  min-height: 0;
+}
+
+.footer-center {
+  text-align: center;
 }
 
 .footer-right {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.footer-text {
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: 1.1px;
-  color: #6a6a6a;
-  line-height: 1.55;
+/* if using a simple center logos row */
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
+.footer-left img,
+.footer-right img,
+.footer-logos img,
 .footer-ccib {
-  width: 120px;
-  height: auto;
+  width: auto;
+  object-fit: contain;
   display: block;
-  margin: 0;
+}
+
+/* default logo sizing */
+.footer-left img,
+.footer-right img,
+.footer-logos img {
+  height: 54px;
+}
+
+.footer-left img[src*="ccib"],
+.footer-right img[src*="ccib"],
+.footer-logos img[src*="ccib"],
+.footer-ccib {
+  height: 64px;
+}
+
+.footer-left img[src*="ESA"],
+.footer-right img[src*="ESA"],
+.footer-logos img[src*="ESA"] {
+  height: 46px;
+}
+
+.footer-text,
+.footer-center {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #6a6a6a;
+  line-height: 1.6;
+}
+
+.footer-credit {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+.footer-credit:hover,
+.footer-credit:focus-visible {
+  color: #d71920;
+}
+
+/* jobber form */
+
+.jobber-form-wrap {
+  margin-top: 25px;
+}
+
+.jobber-form-wrap iframe,
+.jobber-form-wrap .clienthub-powered-by,
+.jobber-form-wrap #61e9e856-d762-4080-9c9a-0759301c86dc-2421907 {
+  width: 100% !important;
+}
+
+.jobber-form-wrap iframe {
+  min-height: 650px;
+  border: none;
 }
 
 /* responsive */
@@ -1074,35 +1151,60 @@ body.landing-page::before {
 
 @media (max-width: 768px) {
   .site-footer {
-    padding: 14px 0 18px;
+    padding: 20px 14px;
     margin-top: 24px;
   }
 
-  .footer-inner {
-    width: min(94%, 520px);
-    grid-template-columns: 96px 1fr;
-    align-items: center;
-    gap: 12px;
+  .footer-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-center {
+    justify-content: center;
+    text-align: center;
   }
 
   .footer-left {
-    width: 100%;
-    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .footer-right {
-    display: none;
+    margin-top: 0;
   }
 
-  .footer-text {
-    text-align: left;
-    font-size: 8.5px;
-    letter-spacing: 0.75px;
-    line-height: 1.38;
+  .footer-left img,
+  .footer-right img,
+  .footer-logos img {
+    height: 40px;
   }
 
+  .footer-left img[src*="ccib"],
+  .footer-right img[src*="ccib"],
+  .footer-logos img[src*="ccib"],
   .footer-ccib {
-    width: 88px;
+    height: 50px;
+  }
+
+  .footer-left img[src*="ESA"],
+  .footer-right img[src*="ESA"],
+  .footer-logos img[src*="ESA"] {
+    height: 32px;
+  }
+
+  .footer-text,
+  .footer-center {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+  }
+
+  .footer-credit {
+    font-size: 8px;
+    letter-spacing: 0.12em;
   }
 
   .floating-call {
@@ -1341,24 +1443,39 @@ body.landing-page::before {
   }
 
   .site-footer {
-    padding: 12px 0 16px;
+    padding: 18px 12px;
     margin-top: 20px;
   }
 
-  .footer-inner {
-    width: min(94%, 360px);
-    grid-template-columns: 82px 1fr;
-    gap: 10px;
+  .footer-logos {
+    gap: 16px;
+    margin-bottom: 12px;
   }
 
-  .footer-text {
+  .footer-left img,
+  .footer-right img,
+  .footer-logos img {
+    height: 36px;
+  }
+
+  .footer-left img[src*="ccib"],
+  .footer-right img[src*="ccib"],
+  .footer-logos img[src*="ccib"],
+  .footer-ccib {
+    height: 44px;
+  }
+
+  .footer-left img[src*="ESA"],
+  .footer-right img[src*="ESA"],
+  .footer-logos img[src*="ESA"] {
+    height: 28px;
+  }
+
+  .footer-text,
+  .footer-center {
     font-size: 8px;
     letter-spacing: 0.65px;
     line-height: 1.34;
-  }
-
-  .footer-ccib {
-    width: 78px;
   }
 }
 
@@ -1370,251 +1487,5 @@ body.landing-page::before {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}.footer-credit {
-  display: block;
-  margin-top: 16px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #8e8e8e;
-  text-decoration: none;
-}.jobber-form-wrap {
-  margin-top: 18px;
-}
-
-.jobber-form-wrap iframe,
-.jobber-form-wrap .clienthub-powered-by,
-.jobber-form-wrap #61e9e856-d762-4080-9c9a-0759301c86dc-2421907 {
-  width: 100%;
-}/* =========================================
-   GLOBAL POLISH
-========================================= */
-.section-block {
-  margin-bottom: 50px;
-}
-
-.page-intro {
-  margin-bottom: 40px;
-}
-
-.inner-wrap {
-  padding-bottom: 40px;
-}
-
-/* =========================================
-   LANDING PAGE BACKGROUND OVERLAY
-   (makes image less noticeable)
-========================================= */
-.landing-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust 0.55 darker / 0.35 lighter */
-  z-index: -1;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-.site-footer {
-  background: #f3f3f3;
-  border-top: 1px solid #e0e0e0;
-  margin-top: 60px;
-  padding: 30px 20px;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Logos row */
-.footer-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-logos img {
-  height: 70px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* ESA logo slightly smaller because it's wide */
-.footer-logos img[src="ESA.png"] {
-  height: 55px;
-}
-
-/* Footer text */
-.footer-text {
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #6a6a6a;
-  line-height: 1.6;
-}
-
-/* Blacksmith Media credit */
-.footer-credit {
-  display: inline-block;
-  margin-top: 14px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #8e8e8e;
-  text-decoration: none;
-}
-
-.footer-credit:hover {
-  color: #d71920;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-@media (max-width: 640px) {
-
-  .site-footer {
-    padding: 25px 15px;
-  }
-
-  .footer-logos {
-    gap: 18px;
-    margin-bottom: 15px;
-  }
-
-  .footer-logos img {
-    height: 42px;
-  }
-
-  .footer-logos img[src="ESA.png"] {
-    height: 32px;
-  }
-
-  .footer-text {
-    font-size: 10px;
-    letter-spacing: 0.6px;
-    line-height: 1.5;
-  }
-
-  .footer-credit {
-    font-size: 8px;
-    letter-spacing: 0.12em;
-  }
-}
-
-/* =========================================
-   BUTTON POLISH
-========================================= */
-.division-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.division-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* =========================================
-   FORM WRAP (JOBBER FORM)
-========================================= */
-.jobber-form-wrap {
-  margin-top: 25px;
-}
-
-.jobber-form-wrap iframe {
-  width: 100% !important;
-  min-height: 650px;
-  border: none;
-}/* FOOTER LAYOUT */
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-left img {
-  height: 55px;
-  width: auto;
-}
-
-.footer-left img[src="ccib.png"] {
-  height: 65px;
-}
-
-.footer-center {
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #6a6a6a;
-  line-height: 1.6;
-}
-
-.footer-right img {
-  height: 75px;
-  width: auto;
-}
-
-.footer-credit {
-  display: inline-block;
-  margin-top: 10px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #8e8e8e;
-  text-decoration: none;
-}
-
-.footer-credit:hover {
-  color: #d71920;
-}
-
-/* MOBILE FOOTER */
-@media (max-width: 768px) {
-  .footer-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left {
-    justify-content: center;
-  }
-
-  .footer-right {
-    margin-top: 10px;
-  }
-
-  .footer-left img {
-    height: 40px;
-  }
-
-  .footer-right img {
-    height: 55px;
-  }
-
-  .footer-center {
-    font-size: 10px;
-  }
-
-  .footer-credit {
-    font-size: 8px;
   }
 }
