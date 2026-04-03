@@ -1388,4 +1388,150 @@ body.landing-page::before {
 .jobber-form-wrap .clienthub-powered-by,
 .jobber-form-wrap #61e9e856-d762-4080-9c9a-0759301c86dc-2421907 {
   width: 100%;
+}/* =========================================
+   GLOBAL POLISH
+========================================= */
+.section-block {
+  margin-bottom: 50px;
+}
+
+.page-intro {
+  margin-bottom: 40px;
+}
+
+.inner-wrap {
+  padding-bottom: 40px;
+}
+
+/* =========================================
+   LANDING PAGE BACKGROUND OVERLAY
+   (makes image less noticeable)
+========================================= */
+.landing-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjust 0.55 darker / 0.35 lighter */
+  z-index: -1;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.site-footer {
+  background: #f3f3f3;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 60px;
+  padding: 30px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logos row */
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ESA logo slightly smaller because it's wide */
+.footer-logos img[src="ESA.png"] {
+  height: 55px;
+}
+
+/* Footer text */
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #6a6a6a;
+  line-height: 1.6;
+}
+
+/* Blacksmith Media credit */
+.footer-credit {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+.footer-credit:hover {
+  color: #d71920;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 25px 15px;
+  }
+
+  .footer-logos {
+    gap: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-logos img {
+    height: 42px;
+  }
+
+  .footer-logos img[src="ESA.png"] {
+    height: 32px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+  }
+
+  .footer-credit {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* =========================================
+   BUTTON POLISH
+========================================= */
+.division-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.division-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   FORM WRAP (JOBBER FORM)
+========================================= */
+.jobber-form-wrap {
+  margin-top: 25px;
+}
+
+.jobber-form-wrap iframe {
+  width: 100% !important;
+  min-height: 650px;
+  border: none;
 }
