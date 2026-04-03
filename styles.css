@@ -1167,4 +1167,128 @@ body.landing-page::before {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}/* ============================= */
+/* UTILITY PAGE ENHANCEMENTS     */
+/* ============================= */
+
+.utility-intro p {
+  max-width: 920px;
+}
+
+.utility-gallery--hero {
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  margin: 18px 0 40px;
+}
+
+.utility-gallery--hero img {
+  height: 360px;
+}
+
+.utility-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 34px;
+}
+
+.utility-split__content h2 {
+  margin-bottom: 16px;
+}
+
+.utility-split__image {
+  position: relative;
+}
+
+.utility-side-image {
+  margin: 0;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.utility-gallery--staggered {
+  grid-template-columns: 1fr 1.15fr 0.9fr;
+  gap: 22px;
+  margin: 34px 0;
+  align-items: start;
+}
+
+.utility-gallery--staggered img:nth-child(1) {
+  height: 220px;
+}
+
+.utility-gallery--staggered img:nth-child(2) {
+  height: 320px;
+}
+
+.utility-gallery--staggered img:nth-child(3) {
+  height: 250px;
+}
+
+.utility-gallery--staggered img,
+.utility-gallery--hero img {
+  object-fit: cover;
+}
+
+.utility-contact-section {
+  margin-top: 40px;
+}
+
+.utility-contact-form {
+  margin-top: 16px;
+}
+
+.utility-contact-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+@media (max-width: 900px) {
+  .utility-gallery--hero,
+  .utility-split,
+  .utility-gallery--staggered {
+    grid-template-columns: 1fr;
+  }
+
+  .utility-gallery--hero {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .utility-gallery--hero img,
+  .utility-gallery--staggered img,
+  .utility-side-image {
+    height: auto;
+    min-height: 0;
+  }
+
+  .utility-gallery--staggered {
+    gap: 16px;
+  }
+
+  .utility-split {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .utility-gallery--hero {
+    margin: 14px 0 24px;
+  }
+
+  .utility-gallery--hero img {
+    height: 220px;
+  }
+
+  .utility-gallery--staggered img:nth-child(1),
+  .utility-gallery--staggered img:nth-child(2),
+  .utility-gallery--staggered img:nth-child(3) {
+    height: 190px;
+  }
+
+  .utility-contact-section {
+    margin-top: 30px;
+  }
 }
