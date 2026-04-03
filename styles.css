@@ -412,11 +412,11 @@ body.landing-page::before {
 .division-label {
   font-family: 'Gordita', Arial, sans-serif;
   font-weight: 900;
-  font-style: normal;
-  font-size: clamp(2.45rem, 3vw, 3.2rem);
-  line-height: 0.94;
+  font-style: italic;
+  font-size: clamp(2.5rem, 3vw, 3.25rem);
+  line-height: 0.9;
   text-transform: uppercase;
-  letter-spacing: 0.005em;
+  letter-spacing: 0;
   margin-bottom: 14px;
 }
 
