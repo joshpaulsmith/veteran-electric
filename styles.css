@@ -736,21 +736,18 @@ body.landing-page::before {
 
 .site-footer {
   width: 100%;
-  background-color: #0a0a0a;
-  color: #ffffff;
-  padding: 26px 0 28px;
+  background-color: #ffffff;
+  color: #111111;
+  padding: 18px 0 20px;
   margin-top: 10px;
-  border-top: 1px solid #1f1f1f;
-}
-
-.footer-inner {
+  border-top: 1px solid #e5e5e5;
+}.footer-inner {
   width: min(90%, 1100px);
   margin: 0 auto;
-  font-size: 12px;
-  letter-spacing: 1.8px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
   text-align: center;
-  opacity: 0.88;
-  line-height: 1.8;
+  color: #555555;
 }
 
 /* IMAGE BLOCKS THROUGHOUT INNER PAGES */
