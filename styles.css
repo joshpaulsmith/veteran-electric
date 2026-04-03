@@ -1539,4 +1539,159 @@ body.landing-page::before,
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}/* =========================
+   MOBILE HEADER FIX
+   ========================= */
+
+@media (max-width: 640px) {
+  .banner-inner {
+    position: relative;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 88px 0 16px;
+  }
+
+  .banner-logo {
+    max-width: 48px;
+    max-height: 40px;
+    margin: 0 auto;
+  }
+
+  .top-social {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-self: unset;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .top-social a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .top-social svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* =========================
+   FOOTER LOGO FIX
+   ========================= */
+
+.footer-left img[src*="ESA"],
+.footer-right img[src*="ESA"],
+.footer-logos img[src*="ESA"],
+.footer-left img[src*="esa"],
+.footer-right img[src*="esa"],
+.footer-logos img[src*="esa"] {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+
+.footer-left img[src*="bi"],
+.footer-right img[src*="bi"],
+.footer-logos img[src*="bi"],
+.footer-left img[src*="BI"],
+.footer-right img[src*="BI"],
+.footer-logos img[src*="BI"] {
+  height: 58px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-left {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .footer-center {
+    display: block;
+  }
+
+  .footer-right {
+    margin-top: 0;
+  }
+
+  .footer-left img[src*="ccib"],
+  .footer-left img[src*="CCIB"] {
+    height: 52px;
+    width: auto;
+  }
+
+  .footer-left img[src*="ESA"],
+  .footer-left img[src*="esa"] {
+    height: 32px;
+    width: auto;
+  }
+
+  .footer-right img[src*="bi"],
+  .footer-right img[src*="BI"] {
+    height: 42px;
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 18px 12px;
+  }
+
+  .footer-row {
+    gap: 14px;
+  }
+
+  .footer-left {
+    gap: 14px;
+  }
+
+  .footer-left img[src*="ccib"],
+  .footer-left img[src*="CCIB"] {
+    height: 46px;
+  }
+
+  .footer-left img[src*="ESA"],
+  .footer-left img[src*="esa"] {
+    height: 28px;
+  }
+
+  .footer-right img[src*="bi"],
+  .footer-right img[src*="BI"] {
+    height: 36px;
+  }
+
+  .footer-center {
+    font-size: 9px;
+    line-height: 1.45;
+    letter-spacing: 0.55px;
+  }
+
+  .footer-credit {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
 }
