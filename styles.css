@@ -1196,4 +1196,101 @@ body.landing-page::before {
     font-size: 10px;
     letter-spacing: 0.02em;
   }
+}/* ============================= */
+/* FOOTER FINAL OVERRIDE         */
+/* ============================= */
+
+/* Create balanced space above footer (like header spacing) */
+.site-footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.96);
+  color: #111111;
+  padding: 18px 0;
+  margin-top: 28px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+/* Footer layout */
+.footer-inner {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Left logo */
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Text block */
+.footer-text {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 1.1px;
+  color: #6a6a6a;
+  line-height: 1.55;
+}
+
+/* CCIB logo */
+.footer-ccib {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* ============================= */
+/* MOBILE FOOTER                 */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 16px 0 70px;
+    margin-top: 26px;
+  }
+
+  .footer-inner {
+    width: min(92%, 420px);
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .footer-left {
+    justify-content: flex-start;
+  }
+
+  .footer-text {
+    text-align: left;
+    font-size: 8.5px;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+  }
+
+  .footer-ccib {
+    width: 90px;
+  }
+
+  /* Floating call button spacing so it doesn't overlap */
+  .floating-call {
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 16px;
+    font-size: 10px;
+  }
+}
+
+/* ============================= */
+/* LANDING PAGE SPACING FIX      */
+/* ============================= */
+
+/* Tighten space between white card and footer */
+body.landing-page .landing-shell {
+  padding-bottom: 10px;
 }
