@@ -8,37 +8,36 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#d71920" />
   <link rel="canonical" href="https://joshpaulsmith.github.io/veteran-electric/" />
+
   <meta property="og:title" content="Veteran Electric | Electrical Contractor in Sault Ste. Marie" />
-  <meta property="og:description" content="Union electrical contractor serving Sault Ste. Marie and Northern Ontario with utility, industrial, commercial, and residential electrical services." />
+  <meta property="og:description" content="Union electrical contractor serving Sault Ste. Marie and Northern Ontario." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://joshpaulsmith.github.io/veteran-electric/" />
   <meta property="og:image" content="https://joshpaulsmith.github.io/veteran-electric/veteranlogo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Veteran Electric | Electrical Contractor in Sault Ste. Marie" />
-  <meta name="twitter:description" content="Union electrical contractor serving Sault Ste. Marie and Northern Ontario with utility, industrial, commercial, and residential electrical services." />
-  <meta name="twitter:image" content="https://joshpaulsmith.github.io/veteran-electric/veteranlogo.png" />
 
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
 </head>
 
 <body class="landing-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- TOP BANNER -->
   <header class="top-banner">
     <div class="banner-inner">
       <img src="veteranlogo2.png" alt="Veteran Electric banner logo" class="banner-logo" />
     </div>
   </header>
 
+  <!-- PAGE LOADER -->
   <div class="page-loader" aria-hidden="true">
     <div class="loader-mark"></div>
   </div>
 
+  <!-- NAV -->
   <header class="site-header">
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" type="button">
       <span></span>
@@ -46,7 +45,7 @@
       <span></span>
     </button>
 
-    <nav class="site-menu" id="site-menu" aria-label="Main navigation">
+    <nav class="site-menu" id="site-menu">
       <a href="./about/">About</a>
       <a href="./electrical/">Electrical Division</a>
       <a href="./utility/">Utility Division</a>
@@ -55,6 +54,7 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <main class="landing-shell" id="main-content">
     <section class="hero">
       <div class="hero-inner">
@@ -87,30 +87,35 @@
     </section>
   </main>
 
+  <!-- FLOATING CALL BUTTON -->
   <a class="floating-call" href="tel:+17052554449">Call a Veteran</a>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img src="ccib.png" alt="CCIB Certified Indigenous Business" class="footer-ccib" />
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-logos">
+        <img src="ccib.png" alt="CCIB Certified Indigenous Business" />
+        <img src="bi.png" alt="International Brotherhood of Electrical Workers" />
+        <img src="ESA.png" alt="Electrical Safety Authority / ECRA License" />
+      </div>
+
+      <div class="footer-text">
+        <strong>Veteran Electric</strong><br />
+        Electrical Contractor<br />
+        Sault Ste. Marie, Ontario<br />
+        Utility • Industrial • Commercial • Residential<br />
+        © 2026 Veteran Electric<br /><br />
+
+        <a href="https://blacksmithmedia.ca" target="_blank" rel="noopener noreferrer" class="footer-credit">
+          WEBSITE BY BLACKSMITH MEDIA
+        </a>
+      </div>
+
     </div>
+  </footer>
 
-    <div class="footer-text">
-      <strong>Veteran Electric</strong><br />
-      Electrical Contractor<br />
-      Sault Ste. Marie, Ontario<br />
-      Utility • Industrial • Commercial • Residential<br />
-      © 2026 Veteran Electric<br />
-
-      <a href="https://blacksmithmedia.ca" target="_blank" rel="noopener noreferrer" class="footer-credit">
-        WEBSITE BY BLACKSMITH MEDIA
-      </a>
-    </div>
-
-    <div class="footer-right"></div>
-  </div>
-</footer>
-
+  <!-- SCRIPTS -->
   <script>
     window.addEventListener("load", () => {
       document.body.classList.add("loaded");
