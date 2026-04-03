@@ -1076,4 +1076,26 @@ body.landing-page::before {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}.page-intro {
+  margin-bottom: 34px;
+}
+
+.page-intro p {
+  max-width: 900px;
+}
+
+.section-block {
+  margin-top: 34px;
+}
+
+.section-block p + p {
+  margin-top: 16px;
+}
+
+.feature-list {
+  margin-top: 10px;
+}
+
+.cta-strip {
+  margin-top: 38px;
 }
