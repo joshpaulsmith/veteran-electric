@@ -2133,4 +2133,45 @@ body.landing-page::before,
   .footer-right img[src*="BI"] {
     height: 34px;
   }
+}/* =========================================
+   DESKTOP FOOTER TRUE CENTER FIX
+========================================= */
+
+@media (min-width: 901px) {
+  .footer-inner {
+    position: relative;
+  }
+
+  .footer-row {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 10px 180px;
+  }
+
+  .footer-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .footer-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .footer-center {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 420px;
+  }
 }
