@@ -2173,4 +2173,116 @@ body.utility-page {
     padding: 10px 14px;
     font-size: 0.76rem;
   }
+}/* =========================================
+   HERO CONTACT SECTION (COMBINED BOX)
+========================================= */
+
+.hero-contact-cta {
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.hero-contact-cta__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--red-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.hero-contact-cta__title {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-contact-cta__text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.hero-contact-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero-contact-cta__button:hover,
+.hero-contact-cta__button:focus-visible {
+  background: var(--red);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   HERO BOX PADDING IMPROVEMENT
+========================================= */
+
+.hero-inner {
+  padding: 38px 34px 36px;
+}
+
+/* =========================================
+   FOOTER DESKTOP SPACING FIX
+========================================= */
+
+@media (min-width: 981px) {
+  .site-footer {
+    padding: 30px 30px;
+  }
+
+  .footer-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .footer-row {
+    min-height: 120px;
+  }
+
+  .footer-left {
+    gap: 28px;
+    padding-right: 24px;
+  }
+
+  .footer-right {
+    padding-left: 24px;
+  }
+
+  .footer-center {
+    min-width: 360px;
+  }
+
+  .footer-left img[src*="ccib"],
+  .footer-left img[src*="CCIB"] {
+    height: 72px;
+  }
+
+  .footer-left img[src*="esa"],
+  .footer-left img[src*="ESA"] {
+    height: 44px;
+  }
+
+  .footer-right img[src*="bi"],
+  .footer-right img[src*="BI"] {
+    height: 58px;
+  }
 }
