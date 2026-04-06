@@ -138,42 +138,6 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    window.addEventListener("load", () => {
-      document.body.classList.add("loaded");
-      setTimeout(() => {
-        const loader = document.querySelector(".page-loader");
-        if (loader) loader.style.display = "none";
-      }, 450);
-    });
-
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".site-menu");
-
-    if (toggle && menu) {
-      const closeMenu = () => {
-        menu.classList.remove("open");
-        toggle.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      };
-
-      toggle.addEventListener("click", () => {
-        const isOpen = menu.classList.toggle("open");
-        toggle.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
-
-      document.addEventListener("click", (event) => {
-        const clickedInsideMenu = menu.contains(event.target);
-        const clickedToggle = toggle.contains(event.target);
-        if (!clickedInsideMenu && !clickedToggle) closeMenu();
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeMenu();
-      });
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
