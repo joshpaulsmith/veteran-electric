@@ -2647,4 +2647,37 @@ body.utility-page {
     min-height: 700px;
     border-radius: 14px;
   }
+}/* ===== GLOBAL PAGE LAYOUT (MATCH HOME PAGE) ===== */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main content fill space so footer sits at bottom */
+main {
+  flex: 1;
+}
+
+/* Sticky header (menu bar) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Keep top banner above sticky nav */
+.top-banner {
+  position: relative;
+  z-index: 1001;
+}
+
+/* Footer always at bottom */
+.site-footer {
+  margin-top: auto;
 }
