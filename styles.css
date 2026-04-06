@@ -2384,4 +2384,86 @@ body.utility-page {
     justify-content: center;
     padding: 0;
   }
+}/* =========================================
+   CAREERS PAGE REFINEMENT
+========================================= */
+
+.careers-page {
+  padding-bottom: 40px;
+}
+
+.careers-hero {
+  max-width: 980px;
+}
+
+.careers-highlights .feature-list div {
+  font-size: 1rem;
+}
+
+.careers-role-grid {
+  margin-top: 20px;
+}
+
+.careers-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.careers-split-card {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.careers-cta {
+  text-align: center;
+}
+
+.careers-contact-actions {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.careers-contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.careers-contact-link:hover,
+.careers-contact-link:focus-visible {
+  transform: translateY(-1px);
+  background: var(--red);
+  border-color: var(--red);
+}
+
+@media (max-width: 980px) {
+  .careers-split {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-contact-actions {
+    gap: 10px;
+  }
+
+  .careers-contact-link {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 0.95rem;
+  }
 }
