@@ -2680,4 +2680,63 @@ main {
 /* Footer always at bottom */
 .site-footer {
   margin-top: auto;
+}/* =========================
+   STICKY/FIXED HEADER + FOOTER
+   ========================= */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body.inner-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* make the white banner stay at the top */
+body.inner-page .top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1200;
+}
+
+/* keep the floating menu pinned too */
+body.inner-page .site-header {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  width: 100%;
+  z-index: 1300;
+}
+
+/* push page content down so it doesn't sit under the fixed header */
+body.inner-page .inner-wrap {
+  flex: 1 0 auto;
+  width: min(var(--content-width), calc(100% - 12px));
+  margin: 0 auto;
+  padding: 120px 0 40px;
+}
+
+/* footer pushed to bottom */
+body.inner-page .site-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  body.inner-page .top-banner {
+    top: 0;
+  }
+
+  body.inner-page .site-header {
+    top: 54px;
+  }
+
+  body.inner-page .inner-wrap {
+    padding-top: 110px;
+  }
 }
