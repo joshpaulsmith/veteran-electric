@@ -2267,4 +2267,29 @@ body.utility-page::before {
 .utility-page .inner-wrap {
   position: relative;
   z-index: 1;
+}/* =========================
+   ELECTRICAL PAGE BACKGROUND
+   ========================= */
+
+body.electrical-page {
+  background: #efefef;
+}
+
+/* Remove gradient/box background */
+.electrical-page .inner-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* White content cards */
+.electrical-page .page-intro,
+.electrical-page .section-block,
+.electrical-page .service-grid,
+.electrical-page .utility-gallery,
+.electrical-page .cta-strip {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
 }
