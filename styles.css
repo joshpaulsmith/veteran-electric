@@ -1938,4 +1938,73 @@ body.utility-page {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}/* =========================================
+   FOOTER TRUE CENTER (DESKTOP FIX)
+========================================= */
+
+.footer-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+/* This is the key part */
+.footer-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #666666;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  width: max-content;
+}
+
+/* Footer logo sizing */
+.footer-left img[src*="ccib"],
+.footer-left img[src*="CCIB"] {
+  height: 60px;
+}
+
+.footer-left img[src*="esa"],
+.footer-left img[src*="ESA"] {
+  height: 38px;
+}
+
+.footer-right img[src*="bi"],
+.footer-right img[src*="BI"] {
+  height: 48px;
+}
+
+/* Mobile footer goes back to stacked layout */
+@media (max-width: 980px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-center {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+  }
 }
