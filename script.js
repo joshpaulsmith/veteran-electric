@@ -180,4 +180,13 @@ if (!prefersReducedMotion) {
       card.classList.remove("is-hovered");
     });
   });
-}
+}// FIX BACK/FORWARD CACHE ISSUES
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("page-leave");
+  document.body.classList.add("loaded");
+
+  const loader = document.querySelector(".page-loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+});
