@@ -2787,4 +2787,9 @@ body.inner-page .site-footer {
   body.inner-page .inner-wrap {
     padding: 72px 0 24px;
   }
+}@media (max-width: 640px) {
+  body.inner-page .page-intro:first-child,
+  body.inner-page main > section:first-child {
+    margin-top: 0;
+  }
 }
