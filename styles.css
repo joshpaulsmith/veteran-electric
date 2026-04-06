@@ -2225,46 +2225,6 @@ body.page-leave {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-/* =========================
-   UTILITY PAGE (LIGHT RED)
-   ========================= */
-
-body.utility-page {
-  background: #fde8e8;
-}
-
-/* Remove gray gradient wrapper */
-.utility-page .inner-wrap {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* White content cards */
-.utility-page .page-intro,
-.utility-page .section-block,
-.utility-page .utility-intro,
-.utility-page .utility-section,
-.utility-page .service-grid,
-.utility-page .utility-gallery,
-.utility-page .cta-strip {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 28px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  margin-bottom: 24px;
-}
-
-/* Red accent headings */
-.utility-page h2 {
-  border-left: 4px solid #d71920;
-  padding-left: 12px;
-}
-
-/* Dark header for contrast */
-.utility-page .topbar {
-  background: #2b2b2b;
-  color: #fff;
-}
 }/* =========================
    ELECTRICAL PAGE BACKGROUND
    ========================= */
@@ -2290,4 +2250,41 @@ body.electrical-page {
   padding: 28px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   margin-bottom: 24px;
+}/* =========================
+   UTILITY PAGE BACKGROUND
+   ========================= */
+
+body.utility-page {
+  background: #fdf1f1;
+}
+
+/* REMOVE the gray wrapper */
+.utility-page .inner-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-top: 40px;
+}
+
+/* Make each section the card instead */
+.utility-page .page-intro,
+.utility-page .section-block,
+.utility-page .utility-gallery,
+.utility-page .cta-strip {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  margin-bottom: 28px;
+}
+
+/* Keep header dark */
+.utility-page .topbar {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+/* Red accent line on headings */
+.utility-page h2 {
+  border-left: 4px solid #d71920;
+  padding-left: 12px;
 }
