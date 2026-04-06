@@ -21,14 +21,44 @@
 <body class="inner-page utility-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <main class="inner-wrap" id="main-content">
-    <div class="topbar fade-in">
-      <a href="../" class="brand-lockup">
-        <img src="../veteranlogo.png" alt="Veteran Electric logo" width="1200" height="365" decoding="async" />
+  <header class="top-banner">
+    <div class="banner-inner">
+      <a href="../" aria-label="Veteran Electric home">
+        <img
+          class="banner-logo"
+          src="../favicon.png"
+          alt="Veteran Electric icon"
+          width="512"
+          height="512"
+          decoding="async"
+        />
       </a>
-      <a href="../" class="back-link">← Back to Divisions</a>
-    </div>
 
+      <div class="top-social">
+        <a href="../electrical/" aria-label="Electrical Division">E</a>
+        <a href="../utility/" aria-label="Utility Division">U</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="site-header" aria-label="Site navigation">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-menu" id="site-menu">
+      <a href="../">Home</a>
+      <a href="../electrical/">Electrical</a>
+      <a href="../utility/">Utility</a>
+      <a href="../about/">About</a>
+      <a href="../careers/">Careers</a>
+      <a href="../contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="inner-wrap" id="main-content">
     <section class="page-intro utility-hero fade-in">
       <div class="utility-hero__content">
         <p class="page-kicker">Infrastructure • Field Support • Northern Ontario</p>
@@ -152,6 +182,30 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <div class="footer-left">
+          <img src="../ccib.png" alt="CCIB logo" />
+          <img src="../esa.png" alt="ESA logo" />
+        </div>
+
+        <div class="footer-center">
+          <strong>Veteran Electric</strong><br />
+          Electrical &amp; Utility Services Across Northern Ontario
+          <br />
+          <a class="footer-credit" href="https://blacksmithmedia.ca/" target="_blank" rel="noopener noreferrer">
+            Website by Blacksmith Media
+          </a>
+        </div>
+
+        <div class="footer-right">
+          <img src="../bi.png" alt="BI logo" />
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <link
     rel="stylesheet"
