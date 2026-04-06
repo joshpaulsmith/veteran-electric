@@ -2224,21 +2224,22 @@ body.page-leave {
 .fade-in.appear {
   opacity: 1 !important;
   transform: translateY(0) !important;
-}/* =========================
-   UTILITY PAGE BACKGROUND
+}
+/* =========================
+   UTILITY PAGE (LIGHT RED)
    ========================= */
 
 body.utility-page {
-  background: #d71920 !important;
+  background: #fde8e8;
 }
 
-/* Remove the gray gradient wrapper on this page only */
+/* Remove gray gradient wrapper */
 .utility-page .inner-wrap {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* Make sections white cards on red background */
+/* White content cards */
 .utility-page .page-intro,
 .utility-page .section-block,
 .utility-page .utility-intro,
@@ -2249,24 +2250,21 @@ body.utility-page {
   background: #ffffff;
   border-radius: 14px;
   padding: 28px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   margin-bottom: 24px;
 }
 
-/* Optional subtle texture so red isn't flat */
-body.utility-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 18px 18px;
-  pointer-events: none;
-  z-index: 0;
+/* Red accent headings */
+.utility-page h2 {
+  border-left: 4px solid #d71920;
+  padding-left: 12px;
 }
 
-.utility-page .inner-wrap {
-  position: relative;
-  z-index: 1;
+/* Dark header for contrast */
+.utility-page .topbar {
+  background: #2b2b2b;
+  color: #fff;
+}
 }/* =========================
    ELECTRICAL PAGE BACKGROUND
    ========================= */
