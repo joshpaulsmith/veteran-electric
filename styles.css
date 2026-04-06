@@ -2197,12 +2197,6 @@ body.page-leave {
   transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.topbar.is-scrolled {
-  background: rgba(15, 15, 15, 0.75);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(18px);
