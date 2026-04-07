@@ -2678,4 +2678,22 @@ body.utility-page {
     line-height: 1.55;
     letter-spacing: 0.06em;
   }
+}/* =========================================
+   LANDER IWSCC SIZE FIX
+========================================= */
+
+.footer-logos img[src*="iwscc"],
+.footer-logos img[src*="IWSCC"] {
+  height: 44px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .footer-logos img[src*="iwscc"],
+  .footer-logos img[src*="IWSCC"] {
+    height: 32px !important;
+    max-width: 160px !important;
+  }
 }
