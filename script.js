@@ -239,4 +239,13 @@ if (!prefersReducedMotion) {
       card.classList.remove("is-hovered");
     });
   });
+}// Safer version: only update text nodes
+function capitalizeVeteran(node) {
+  if (node.nodeType === 3) {
+    node.nodeValue = node.nodeValue.replace(/\bveteran\b/g, "Veteran");
+  } else {
+    node.childNodes.forEach(capitalizeVeteran);
+  }
 }
+
+capitalizeVeteran(document.body);
