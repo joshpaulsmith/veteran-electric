@@ -2696,4 +2696,34 @@ body.utility-page {
     height: 32px !important;
     max-width: 160px !important;
   }
+}/* =========================================
+   JOBBER LINK BUTTON (NO EMBED)
+========================================= */
+
+.utility-contact-cta {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.jobber-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.jobber-link-button:hover {
+  background: #d71920;
+  transform: translateY(-2px);
 }
