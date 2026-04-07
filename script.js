@@ -239,13 +239,18 @@ if (!prefersReducedMotion) {
       card.classList.remove("is-hovered");
     });
   });
-}// Safer version: only update text nodes
-function capitalizeVeteran(node) {
-  if (node.nodeType === 3) {
-    node.nodeValue = node.nodeValue.replace(/\bveteran\b/g, "Veteran");
-  } else {
-    node.childNodes.forEach(capitalizeVeteran);
+}function capitalizeVeteranInText(node) {
+  if (node.nodeType === Node.TEXT_NODE) {
+    node.nodeValue = node.nodeValue.replace(/\bveteran\b/g, 'Veteran');
+  } else if (
+    node.nodeType === Node.ELEMENT_NODE &&
+    node.tagName !== 'SCRIPT' &&
+    node.tagName !== 'STYLE'
+  ) {
+    node.childNodes.forEach(capitalizeVeteranInText);
   }
 }
 
-capitalizeVeteran(document.body);
+document.addEventListener('DOMContentLoaded', () => {
+  capitalizeVeteranInText(document.body);
+});
