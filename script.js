@@ -8,13 +8,6 @@ const toggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".site-menu");
 const siteHeader = document.querySelector(".site-header");
 
-// PAGE LOADER
-const hideLoader = () => {
-  if (!loader) return;
-  body.classList.add("loaded");
-  loader.style.display = "none";
-};
-
 window.addEventListener("load", () => {
   body.classList.add("loaded");
 
@@ -239,18 +232,4 @@ if (!prefersReducedMotion) {
       card.classList.remove("is-hovered");
     });
   });
-}function capitalizeVeteranInText(node) {
-  if (node.nodeType === Node.TEXT_NODE) {
-    node.nodeValue = node.nodeValue.replace(/\bveteran\b/g, 'Veteran');
-  } else if (
-    node.nodeType === Node.ELEMENT_NODE &&
-    node.tagName !== 'SCRIPT' &&
-    node.tagName !== 'STYLE'
-  ) {
-    node.childNodes.forEach(capitalizeVeteranInText);
-  }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  capitalizeVeteranInText(document.body);
-});
