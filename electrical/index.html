@@ -25,7 +25,8 @@
 
   <link rel="stylesheet" href="../styles.css?v=20260420" />
   <link rel="icon" type="image/png" href="../favicon.png" />
-  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
 </head>
 <body class="inner-page electrical-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -40,6 +41,11 @@
       </a>
 
       <div class="top-social">
+        <a href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 22v-8.2h2.8l.42-3.2H13.5V8.56c0-.93.26-1.56 1.6-1.56h1.7V4.13c-.29-.04-1.28-.13-2.43-.13-2.41 0-4.06 1.47-4.06 4.18v2.42H7.5v3.2h2.76V22h3.24z"/>
+          </svg>
+        </a>
         <!-- Instagram -->
         <a href="https://www.instagram.com/veteranelectric2022" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -76,6 +82,7 @@
       <a href="../utility/">Utility Division</a>
       <a href="../careers/">Careers</a>
       <a href="../contact/">Contact</a>
+      <a class="menu-cta" href="../contact/">Request a Quote</a>
     </nav>
   </header>
 
@@ -92,31 +99,40 @@
       </div>
     </section>
 
-    <section class="utility-gallery electrical-gallery fade-in" aria-label="Electrical Division project photos">
-      <img
-        src="../panel1.jpg"
-        alt="Electrical panel installation work by Veteran Electric"
-        width="2048"
-        height="1536"
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        src="../panel2.jpg"
-        alt="Commercial electrical panel and wiring work"
-        width="1536"
-        height="2048"
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        src="../panel4.jpg"
-        alt="Electrical service upgrade and organized panel work"
-        width="1536"
-        height="2048"
-        loading="lazy"
-        decoding="async"
-      />
+    <section class="utility-gallery electrical-gallery fade-in project-gallery-shell" aria-label="Electrical Division project photos">
+      <figure class="project-card">
+        <img
+          src="../panel1.jpg"
+          alt="Electrical panel installation work by Veteran Electric"
+          width="2048"
+          height="1536"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Panel upgrades and service work completed with clean layout and dependable finish quality.</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img
+          src="../panel2.jpg"
+          alt="Commercial electrical panel and wiring work"
+          width="1536"
+          height="2048"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Commercial electrical support for active spaces, tenant improvements, and building upgrades.</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img
+          src="../panel4.jpg"
+          alt="Electrical service upgrade and organized panel work"
+          width="1536"
+          height="2048"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Organized service upgrades, troubleshooting, and replacement work for homes and businesses.</figcaption>
+      </figure>
     </section>
 
     <section class="section-block fade-in">
@@ -241,10 +257,22 @@
       <h2>Serving Sault Ste. Marie and Northern Ontario</h2>
       <p>
         Veteran Electric is proudly based in Sault Ste. Marie and positioned to support clients
-        across Northern Ontario with reliable electrical service and project support. If you need
+        across Algoma and Northern Ontario with reliable electrical service and project support. If you need
         residential or commercial electrical work completed by a team that values safety,
         accountability, and dependable execution, we are ready to help.
       </p>
+    </section>
+
+    <section class="cta-strip fade-in quote-strip">
+      <h2>Need electrical service, upgrades, or a project quote?</h2>
+      <p>
+        Call Veteran Electric at 705-949-7845 or request a quote online for residential and commercial work in
+        Sault Ste. Marie, Algoma, and throughout Northern Ontario.
+      </p>
+      <div class="quote-actions quote-actions--center">
+        <a class="hero-contact-cta__button" href="tel:+17059497845">Call 705-949-7845</a>
+        <a class="quote-link-secondary quote-link-secondary--light" href="../contact/">Request a Quote</a>
+      </div>
     </section>
 
     <section class="section-block utility-contact-section fade-in electrical-form-section">
@@ -264,7 +292,7 @@
   </main>
 
   <!-- FLOATING CALL BUTTON -->
-  <a class="floating-call" href="tel:+17059497845">Call a Veteran</a>
+  <a class="floating-call" href="tel:+17059497845">Call 705-949-7845</a>
 
   <!-- FOOTER -->
 <footer class="site-footer">
@@ -293,11 +321,19 @@
 
       <div class="footer-center">
         <strong>Veteran Electric</strong>
-        Electrical Company<br>
-        Sault Ste. Marie, Ontario<br>
-        Utility • Industrial • Commercial • Residential<br>
-        © 2026 Veteran Electric
-        <br>
+        <span class="footer-meta">Electrical Company</span>
+        <span class="footer-meta">Sault Ste. Marie, Ontario</span>
+        <span class="footer-meta">Utility • Industrial • Commercial • Residential</span>
+        <div class="footer-contact-list">
+          <a href="tel:+17059497845">705-949-7845</a>
+          <a href="mailto:recruitment@veteranelectric.ca">recruitment@veteranelectric.ca</a>
+          <span>Sault Ste. Marie and Northern Ontario</span>
+        </div>
+        <div class="footer-actions">
+          <a class="footer-action" href="../contact/">Request a Quote</a>
+          <a class="footer-action footer-action--ghost" href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener">Follow on Facebook</a>
+        </div>
+        <span class="footer-meta">© 2026 Veteran Electric</span>
         <a href="https://blacksmithmedia.ca" class="footer-credit">
           WEBSITE BY BLACKSMITH MEDIA
         </a>

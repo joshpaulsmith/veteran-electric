@@ -21,7 +21,8 @@
   <meta property="og:image" content="https://veteranelectric.ca/veteranlogo.png" />
   <link rel="stylesheet" href="../styles.css?v=20260420" />
   <link rel="icon" type="image/png" href="../favicon.png" />
-  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -47,6 +48,11 @@
       </a>
 
       <div class="top-social">
+        <a href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 22v-8.2h2.8l.42-3.2H13.5V8.56c0-.93.26-1.56 1.6-1.56h1.7V4.13c-.29-.04-1.28-.13-2.43-.13-2.41 0-4.06 1.47-4.06 4.18v2.42H7.5v3.2h2.76V22h3.24z"/>
+          </svg>
+        </a>
         <!-- Instagram -->
         <a href="https://www.instagram.com/veteranelectric2022" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -84,6 +90,7 @@
       <a href="../about/">About</a>
       <a href="../careers/">Careers</a>
       <a href="../contact/">Contact</a>
+      <a class="menu-cta" href="../contact/">Request a Quote</a>
     </nav>
   </header>
 
@@ -116,31 +123,40 @@
       </p>
     </section>
 
-    <section class="utility-gallery fade-in" aria-label="Veteran Electric team and work photos">
-      <img
-        src="../teampicture.jpg"
-        alt="Veteran Electric team on site"
-        width="2000"
-        height="2000"
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        src="../teampicture2.jpg"
-        alt="Veteran Electric crew working"
-        width="1536"
-        height="2048"
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        src="../shopandtrailer.jpg"
-        alt="Veteran Electric shop and service trailer"
-        width="2048"
-        height="1536"
-        loading="lazy"
-        decoding="async"
-      />
+    <section class="utility-gallery fade-in project-gallery-shell" aria-label="Veteran Electric team and work photos">
+      <figure class="project-card">
+        <img
+          src="../teampicture.jpg"
+          alt="Veteran Electric team on site"
+          width="2000"
+          height="2000"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Crews built around teamwork, preparation, and pride in the work from day one.</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img
+          src="../teampicture2.jpg"
+          alt="Veteran Electric crew working"
+          width="1536"
+          height="2048"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Field-ready people who value discipline, safety, and dependable execution.</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img
+          src="../shopandtrailer.jpg"
+          alt="Veteran Electric shop and service trailer"
+          width="2048"
+          height="1536"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Equipment, organization, and support systems built for long-term growth across Ontario.</figcaption>
+      </figure>
     </section>
 
     <section class="section-block fade-in careers-highlights">
@@ -241,11 +257,19 @@
 
       <div class="footer-center">
         <strong>Veteran Electric</strong>
-        Electrical Company<br>
-        Sault Ste. Marie, Ontario<br>
-        Utility • Industrial • Commercial • Residential<br>
-        © 2026 Veteran Electric
-        <br>
+        <span class="footer-meta">Electrical Company</span>
+        <span class="footer-meta">Sault Ste. Marie, Ontario</span>
+        <span class="footer-meta">Utility • Industrial • Commercial • Residential</span>
+        <div class="footer-contact-list">
+          <a href="tel:+17059497845">705-949-7845</a>
+          <a href="mailto:recruitment@veteranelectric.ca">recruitment@veteranelectric.ca</a>
+          <span>Sault Ste. Marie and Northern Ontario</span>
+        </div>
+        <div class="footer-actions">
+          <a class="footer-action" href="../contact/">Request a Quote</a>
+          <a class="footer-action footer-action--ghost" href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener">Follow on Facebook</a>
+        </div>
+        <span class="footer-meta">© 2026 Veteran Electric</span>
         <a href="https://blacksmithmedia.ca" class="footer-credit">
           WEBSITE BY BLACKSMITH MEDIA
         </a>
@@ -263,7 +287,7 @@
   </div>
 </footer>
 
-  <a class="floating-call" href="tel:17059497845">Call Now</a>
+  <a class="floating-call" href="tel:17059497845">Call 705-949-7845</a>
 
   <script src="../script.js?v=20260420"></script>
 </body>

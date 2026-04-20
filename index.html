@@ -21,6 +21,8 @@
 
   <link rel="stylesheet" href="styles.css?v=20260420" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <script type="application/ld+json">
   {
@@ -32,6 +34,7 @@
     "image": "https://veteranelectric.ca/veteranlogo.png",
     "telephone": "+1-705-949-7845",
     "sameAs": [
+      "https://www.facebook.com/VeteranElectricCorp",
       "https://www.instagram.com/veteranelectric2022",
       "https://www.linkedin.com/company/veteran-electric-corp"
     ],
@@ -72,6 +75,27 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Veteran Electric",
+    "url": "https://veteranelectric.ca/",
+    "logo": "https://veteranelectric.ca/veteranlogo.png",
+    "email": "recruitment@veteranelectric.ca",
+    "telephone": "+1-705-949-7845",
+    "sameAs": [
+      "https://www.facebook.com/VeteranElectricCorp",
+      "https://www.instagram.com/veteranelectric2022",
+      "https://www.linkedin.com/company/veteran-electric-corp"
+    ],
+    "areaServed": [
+      "Sault Ste. Marie",
+      "Algoma District",
+      "Northern Ontario"
+    ]
+  }
+  </script>
 </head>
 
 <body class="landing-page">
@@ -87,16 +111,21 @@
       </a>
 
       <div class="top-social">
+        <a href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 22v-8.2h2.8l.42-3.2H13.5V8.56c0-.93.26-1.56 1.6-1.56h1.7V4.13c-.29-.04-1.28-.13-2.43-.13-2.41 0-4.06 1.47-4.06 4.18v2.42H7.5v3.2h2.76V22h3.24z"/>
+          </svg>
+        </a>
         <!-- Instagram -->
         <a href="https://www.instagram.com/veteranelectric2022" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.88 1.12a1.13 1.13 0 1 1 0 2.26 1.13 1.13 0 0 1 0-2.26zM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5zm0 1.5A4 4 0 1 0 16 12a4 4 0 0 0-4-4z"/>
           </svg>
         </a>
 
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/company/veteran-electric-corp" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-9.75 6.25H6.5V17h2.75V9.25zM7.88 5.75a1.63 1.63 0 1 0 0 3.25 1.63 1.63 0 0 0 0-3.25zM17.5 11.9c0-2.47-1.32-3.62-3.08-3.62-1.42 0-2.06.78-2.4 1.33v-1.14H9.25c.03.72 0 8.53 0 8.53H12v-4.76c0-.25.02-.51.09-.69.2-.51.66-1.03 1.36-1.03.96 0 1.34.76 1.34 1.88V17h2.71v-5.1z"/>
           </svg>
         </a>
@@ -118,6 +147,7 @@
       <a href="./utility/">Utility Division</a>
       <a href="./careers/">Careers</a>
       <a href="./contact/">Contact</a>
+      <a class="menu-cta" href="./contact/">Request a Quote</a>
     </nav>
   </header>
 
@@ -158,37 +188,104 @@
           <p class="hero-contact-cta__text">
             Contact Veteran Electric for residential, commercial, industrial, and utility electrical service requests in Sault Ste. Marie and throughout Northern Ontario.
           </p>
-          <a class="hero-contact-cta__button" href="./contact/">Get in Touch</a>
+          <div class="quote-actions">
+            <a class="hero-contact-cta__button" href="./contact/">Request a Quote</a>
+            <a class="quote-link-secondary" href="tel:+17059497845">Call 705-949-7845</a>
+          </div>
         </div>
+
+        <section class="home-proof-strip" aria-label="Why choose Veteran Electric">
+          <div class="proof-card">
+            <strong>Union workforce</strong>
+            <span>Skilled crews that show up prepared, accountable, and ready to work safely.</span>
+          </div>
+          <div class="proof-card">
+            <strong>Veteran-owned</strong>
+            <span>Built around discipline, professionalism, and pride in the finished result.</span>
+          </div>
+          <div class="proof-card">
+            <strong>Full-scope service</strong>
+            <span>Utility, industrial, commercial, and residential support under one banner.</span>
+          </div>
+          <div class="proof-card">
+            <strong>Northern Ontario coverage</strong>
+            <span>Based in Sault Ste. Marie and supporting clients across Algoma and the North.</span>
+          </div>
+        </section>
+
+        <section class="home-projects" aria-labelledby="project-highlights-title">
+          <div class="section-heading section-heading--center">
+            <p class="page-kicker">Project Highlights</p>
+            <h2 id="project-highlights-title">Field-ready work across Sault Ste. Marie, Algoma, and Northern Ontario</h2>
+          </div>
+          <div class="project-gallery project-gallery--three">
+            <figure class="project-card">
+              <img src="panel1.jpg" alt="Electrical panel installation by Veteran Electric" width="2048" height="1536" loading="lazy" decoding="async" />
+              <figcaption>Electrical upgrades and panel work completed with clean organization and reliable execution.</figcaption>
+            </figure>
+            <figure class="project-card">
+              <img src="utility2.jpg" alt="Veteran Electric utility infrastructure field work" width="2048" height="1536" loading="lazy" decoding="async" />
+              <figcaption>Utility field support built for demanding environments, active sites, and practical coordination.</figcaption>
+            </figure>
+            <figure class="project-card">
+              <img src="shopandtrailer.jpg" alt="Veteran Electric trailer and equipment" width="2048" height="1536" loading="lazy" decoding="async" />
+              <figcaption>Professional crews, organized equipment, and dependable support for projects across the region.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="home-service-area" aria-labelledby="service-area-title">
+          <div class="section-heading section-heading--center">
+            <p class="page-kicker">Service Area</p>
+            <h2 id="service-area-title">Serving Sault Ste. Marie, Algoma, and Northern Ontario</h2>
+          </div>
+          <p>
+            Veteran Electric supports residential, commercial, industrial, and utility clients in Sault Ste. Marie,
+            throughout Algoma, and across Northern Ontario. Whether you need a local service call, project support,
+            or field-ready crews for larger infrastructure work, we bring the same disciplined approach to every site.
+          </p>
+        </section>
 
       </div>
     </section>
   </main>
 
   <!-- FLOATING CALL BUTTON -->
-  <a class="floating-call" href="tel:+17059497845">Call a Veteran</a>
+  <a class="floating-call" href="tel:+17059497845">Call 705-949-7845</a>
 
   <!-- FOOTER -->
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-logos">
-      <img src="ccib.png" alt="CCIB Certified Indigenous Business" width="2933" height="925" loading="lazy" decoding="async">
-      <img src="ESA.png" alt="Electrical Safety Authority" width="1609" height="509" loading="lazy" decoding="async">
-      <img src="iwscc.png" alt="Inclusive Workplace and Supply Council of Canada" width="628" height="179" loading="lazy" decoding="async">
-      <img src="bi.png" alt="International Brotherhood of Electrical Workers" width="600" height="600" loading="lazy" decoding="async">
-    </div>
+    <div class="footer-row">
+      <div class="footer-left">
+        <img src="ccib.png" alt="CCIB Certified Indigenous Business" width="2933" height="925" loading="lazy" decoding="async">
+        <img src="ESA.png" alt="Electrical Safety Authority" width="1609" height="509" loading="lazy" decoding="async">
+        <img src="iwscc.png" alt="Inclusive Workplace and Supply Council of Canada" width="628" height="179" loading="lazy" decoding="async">
+      </div>
 
-    <div class="footer-center">
-      <strong>Veteran Electric</strong><br>
-      Electrician in Sault Ste. Marie, Ontario<br>
-      Residential • Commercial • Industrial • Utility<br>
-      Serving Sault Ste. Marie and Northern Ontario<br>
-      © 2026 Veteran Electric
-      <br>
-      <a href="https://blacksmithmedia.ca" class="footer-credit">
-        WEBSITE BY BLACKSMITH MEDIA
-      </a>
+      <div class="footer-center">
+        <strong>Veteran Electric</strong>
+        <span class="footer-meta">Electrician in Sault Ste. Marie, Ontario</span>
+        <span class="footer-meta">Residential • Commercial • Industrial • Utility</span>
+        <div class="footer-contact-list">
+          <a href="tel:+17059497845">705-949-7845</a>
+          <a href="mailto:recruitment@veteranelectric.ca">recruitment@veteranelectric.ca</a>
+          <span>Sault Ste. Marie and Northern Ontario</span>
+        </div>
+        <div class="footer-actions">
+          <a class="footer-action" href="./contact/">Request a Quote</a>
+          <a class="footer-action footer-action--ghost" href="https://www.facebook.com/VeteranElectricCorp" target="_blank" rel="noopener">Follow on Facebook</a>
+        </div>
+        <span class="footer-meta">© 2026 Veteran Electric</span>
+        <a href="https://blacksmithmedia.ca" class="footer-credit">
+          WEBSITE BY BLACKSMITH MEDIA
+        </a>
+      </div>
+
+      <div class="footer-right">
+        <img src="bi.png" alt="International Brotherhood of Electrical Workers" width="600" height="600" loading="lazy" decoding="async">
+      </div>
     </div>
   </div>
 </footer>
