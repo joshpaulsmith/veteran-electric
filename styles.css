@@ -107,7 +107,7 @@ body {
 }
 
 body.page-leave {
-  opacity: 0;
+  opacity: 1;
 }
 
 body.landing-page,
@@ -379,7 +379,7 @@ body.loaded .page-loader {
 ========================================= */
 
 body.landing-page {
-  background: url('mainbackground.jpg') center/cover no-repeat fixed;
+  background: url('mainbackground.jpg') center/cover no-repeat;
 }
 
 body.landing-page::before {
@@ -387,8 +387,6 @@ body.landing-page::before {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.58);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
   z-index: -1;
 }
 

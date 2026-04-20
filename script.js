@@ -12,15 +12,7 @@ window.addEventListener("load", () => {
   body.classList.add("loaded");
 
   if (!loader) return;
-
-  if (prefersReducedMotion) {
-    loader.style.display = "none";
-    return;
-  }
-
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 350);
+  loader.style.display = "none";
 });
 
 // FIX BACK/FORWARD CACHE ISSUES
@@ -105,40 +97,15 @@ if (siteHeader) {
   window.addEventListener("scroll", updateHeaderState, { passive: true });
 }
 
-// SMART PAGE TRANSITIONS
+// CLOSE MENU WHEN NAVIGATING
 document.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-
-    if (!href) return;
-    if (href.startsWith("#")) return;
-    if (href.startsWith("mailto:")) return;
-    if (href.startsWith("tel:")) return;
-    if (href.startsWith("javascript:")) return;
-    if (this.hasAttribute("download")) return;
-    if (this.target === "_blank") return;
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    if (this.origin !== window.location.origin) return;
-
-    e.preventDefault();
-
+  link.addEventListener("click", function () {
     if (menu && toggle) {
       menu.classList.remove("open");
       toggle.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
       body.classList.remove("menu-open");
     }
-
-    if (prefersReducedMotion) {
-      window.location.href = this.href;
-      return;
-    }
-
-    body.classList.add("page-leave");
-
-    setTimeout(() => {
-      window.location.href = this.href;
-    }, 260);
   });
 });
 
@@ -199,25 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   faders.forEach((fader) => appearOnScroll.observe(fader));
 });
-
-// SUBTLE PARALLAX FOR DESKTOP ONLY
-if (!prefersReducedMotion && window.innerWidth > 991) {
-  const parallaxItems = document.querySelectorAll(".page-intro, .utility-gallery img");
-
-  if (parallaxItems.length) {
-    const updateParallax = () => {
-      const scrollY = window.scrollY;
-
-      parallaxItems.forEach((item) => {
-        const speed = item.matches("img") ? 0.025 : 0.012;
-        const offset = scrollY * speed;
-        item.style.transform = `translateY(${offset}px)`;
-      });
-    };
-
-    window.addEventListener("scroll", updateParallax, { passive: true });
-  }
-}
 
 // HOVER LIFT
 if (!prefersReducedMotion) {
