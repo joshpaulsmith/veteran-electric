@@ -2936,20 +2936,36 @@ textarea:focus-visible {
 
 .footer-center {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .footer-meta {
   display: block;
+  color: #666666;
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 .footer-contact-list {
-  display: grid;
-  gap: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: center;
   justify-items: center;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   letter-spacing: 0;
   color: #2e2e2e;
+}
+
+.footer-contact-list > *::after {
+  content: "•";
+  margin-left: 16px;
+  color: #a1a1a1;
+}
+
+.footer-contact-list > *:last-child::after {
+  content: none;
+  margin-left: 0;
 }
 
 .footer-contact-list a {
@@ -2983,21 +2999,29 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
-.footer-action--ghost {
-  background: transparent;
-  color: #111111;
-  border: 1px solid rgba(17, 17, 17, 0.14);
-}
-
 .footer-action:hover,
 .footer-action:focus-visible {
   background: var(--red);
   color: #ffffff;
 }
 
-.footer-action--ghost:hover,
-.footer-action--ghost:focus-visible {
-  border-color: var(--red);
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;
+  color: #666666;
+  font-size: 0.8rem;
+}
+
+.footer-links a {
+  color: #111111;
+  font-weight: 600;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--red);
 }
 
 .floating-call {
@@ -3043,6 +3067,16 @@ textarea:focus-visible {
   .top-social a {
     width: 36px;
     height: 36px;
+  }
+
+  .footer-contact-list {
+    display: grid;
+    gap: 6px;
+  }
+
+  .footer-contact-list > *::after {
+    content: none;
+    margin-left: 0;
   }
 
   .project-card img,
