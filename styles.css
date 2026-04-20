@@ -2946,65 +2946,6 @@ textarea:focus-visible {
   line-height: 1.55;
 }
 
-.footer-contact-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  justify-content: center;
-  justify-items: center;
-  font-size: 0.84rem;
-  letter-spacing: 0;
-  color: #2e2e2e;
-}
-
-.footer-contact-list > *::after {
-  content: "•";
-  margin-left: 16px;
-  color: #a1a1a1;
-}
-
-.footer-contact-list > *:last-child::after {
-  content: none;
-  margin-left: 0;
-}
-
-.footer-contact-list a {
-  color: inherit;
-}
-
-.footer-contact-list a:hover,
-.footer-contact-list a:focus-visible {
-  color: var(--red);
-}
-
-.footer-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.footer-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: #111111;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.footer-action:hover,
-.footer-action:focus-visible {
-  background: var(--red);
-  color: #ffffff;
-}
-
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -3049,13 +2990,11 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .quote-actions,
-  .footer-actions {
+  .quote-actions {
     flex-direction: column;
   }
 
   .quote-actions a,
-  .footer-action,
   .quote-link-secondary {
     width: 100%;
   }
@@ -3067,16 +3006,6 @@ textarea:focus-visible {
   .top-social a {
     width: 36px;
     height: 36px;
-  }
-
-  .footer-contact-list {
-    display: grid;
-    gap: 6px;
-  }
-
-  .footer-contact-list > *::after {
-    content: none;
-    margin-left: 0;
   }
 
   .project-card img,
