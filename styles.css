@@ -2757,7 +2757,7 @@ textarea:focus-visible {
 }
 
 .top-social {
-  min-width: 134px;
+  min-width: 178px;
 }
 
 .menu-cta {
@@ -2850,7 +2850,8 @@ textarea:focus-visible {
 }
 
 .home-projects,
-.home-service-area {
+.home-service-area,
+.home-reviews {
   margin-top: 28px;
   padding: 30px;
   border-radius: 26px;
@@ -2861,6 +2862,18 @@ textarea:focus-visible {
 
 .home-service-area p {
   max-width: 860px;
+  margin: 0 auto;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.home-reviews {
+  text-align: center;
+}
+
+.home-reviews p {
+  max-width: 760px;
   margin: 0 auto;
   color: var(--text-soft);
   font-size: 1rem;
@@ -2980,7 +2993,8 @@ textarea:focus-visible {
 @media (max-width: 768px) {
   .hero-inner,
   .home-projects,
-  .home-service-area {
+  .home-service-area,
+  .home-reviews {
     padding: 24px 20px;
   }
 
@@ -2998,7 +3012,7 @@ textarea:focus-visible {
   }
 
   .top-social {
-    min-width: 126px;
+    min-width: 166px;
   }
 
   .top-social a {
