@@ -3,6 +3,7 @@
   src: url('./Gordita-Font/Gordita-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url('./Gordita-Font/Gordita-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url('./Gordita-Font/Gordita-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
   src: url('./Gordita-Font/Gordita-Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -31,6 +35,7 @@
   src: url('./Gordita-Font/Gordita-RegularItalic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +43,7 @@
   src: url('./Gordita-Font/Gordita-MediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +51,7 @@
   src: url('./Gordita-Font/Gordita-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -52,6 +59,7 @@
   src: url('./Gordita-Font/Gordita-BlackItalic.otf') format('opentype');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
 
 :root {
@@ -214,8 +222,6 @@ body.loaded .page-loader {
   z-index: 1200;
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .banner-inner {
@@ -315,8 +321,6 @@ body.loaded .page-loader {
   gap: 5px;
   padding: 0 14px;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow-soft);
 }
 
@@ -724,6 +728,8 @@ body.landing-page::before {
   border: 1px solid var(--border);
   border-radius: 26px;
   box-shadow: var(--shadow-soft);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 .section-block h2,
@@ -2858,6 +2864,8 @@ textarea:focus-visible {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
 }
 
 .home-service-area p {
