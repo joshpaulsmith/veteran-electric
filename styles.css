@@ -438,27 +438,27 @@ body.landing-page::before {
   max-width: 760px;
   margin: 0 auto;
   color: var(--text-soft);
-  font-size: 1.04rem;
-  line-height: 1.65;
+  font-size: 1.03rem;
+  line-height: 1.7;
   font-weight: 400;
 }
 
 .hero-sub {
   max-width: 760px;
-  margin: 10px auto 22px;
+  margin: 12px auto 0;
   color: var(--text-muted);
   font-size: 0.94rem;
-  line-height: 1.55;
+  line-height: 1.68;
   font-weight: 400;
 }
 
 .division-buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 18px;
+  gap: 16px;
   width: 100%;
   max-width: 860px;
-  margin: 22px auto 0;
+  margin: 30px auto 0;
 }
 
 .division-card {
@@ -466,8 +466,8 @@ body.landing-page::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
-  padding: 30px 24px;
+  min-height: 188px;
+  padding: 28px 24px 24px;
   border-radius: 22px;
   border: 1px solid transparent;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
@@ -506,8 +506,10 @@ body.landing-page::before {
 .division-services {
   font-weight: 500;
   font-size: 0.91rem;
-  line-height: 1.48;
-  max-width: 92%;
+  line-height: 1.58;
+  max-width: 88%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .division-card.electrical .division-services {
@@ -2791,6 +2793,9 @@ textarea:focus-visible {
 .hero-actions {
   justify-content: center;
   margin-top: 22px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
 }
 
 .quote-actions--center {
@@ -2835,19 +2840,19 @@ textarea:focus-visible {
 .home-proof-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 28px;
+  gap: 16px;
+  margin-top: 34px;
 }
 
 .proof-card {
   display: grid;
   gap: 8px;
-  padding: 18px 18px;
+  padding: 20px 20px;
   border-radius: 18px;
   background: linear-gradient(180deg, #ffffff, #fafafa);
   border: 1px solid var(--border);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  text-align: left;
+  text-align: center;
 }
 
 .proof-card strong {
@@ -2865,8 +2870,8 @@ textarea:focus-visible {
 .home-service-area,
 .home-reviews,
 .home-local-section {
-  margin-top: 28px;
-  padding: 30px;
+  margin-top: 30px;
+  padding: 32px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--border);
@@ -2881,6 +2886,7 @@ textarea:focus-visible {
   color: var(--text-soft);
   font-size: 1rem;
   line-height: 1.8;
+  text-align: center;
 }
 
 .home-reviews {
@@ -2897,10 +2903,14 @@ textarea:focus-visible {
 
 .home-local-section h2 {
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .home-local-section p {
   max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .project-gallery {
@@ -3022,6 +3032,10 @@ textarea:focus-visible {
     padding: 24px 20px;
   }
 
+  .hero-actions {
+    margin-bottom: 12px;
+  }
+
   .home-proof-strip {
     grid-template-columns: 1fr;
   }
@@ -3033,6 +3047,10 @@ textarea:focus-visible {
   .quote-actions a,
   .quote-link-secondary {
     width: 100%;
+  }
+
+  .division-buttons {
+    margin-top: 22px;
   }
 
   .top-social {
